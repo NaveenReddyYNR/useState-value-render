@@ -1,0 +1,33 @@
+import React, { useState } from "react";
+
+const App = () => {
+  const [name, setName] = useState([
+    {
+      name: "naveen",
+      age: 25,
+      image:
+        "https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg",
+    },
+    {
+      name: "prasanth",
+      age: 23,
+      image:
+        "https://thumbs.dreamstime.com/b/beautiful-rain-forest-ang-ka-nature-trail-doi-inthanon-national-park-thailand-36703721.jpg",
+    },
+  ]);
+  return (
+    <div>
+      {name.map((item) => {
+        return (
+          <>
+            <div>{item.name}</div>
+            <img src={item.image} style={{ width: "200px", height: "200px" }} />
+            <div>{item.age}</div>
+          </>
+        );
+      })}
+    </div>
+  );
+};
+
+export default App;
